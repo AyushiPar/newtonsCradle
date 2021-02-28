@@ -2,9 +2,9 @@ class Bob{
     constructor(x,y,width,height){
         var options = {
             isStatic : false,
-            restitution : 0.3,
+            restitution : 1,
             friction : 0.1,
-            density : 0.30,
+            density :2,
         }
 // this.body = Matter.Bodies.circle(x,y,20,options);
         this.body = Bodies.circle(x,y,20,options);
@@ -19,7 +19,7 @@ class Bob{
         rotate(angle);
         ellipseMode(RADIUS);
         fill("pink");
-        ellipse(0,0, 20,20);
+        ellipse(0,0, bobDiameter,bobDiameter);
         pop();
     }
 }
